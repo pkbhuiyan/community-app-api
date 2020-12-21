@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+
 const users = require('./routes/api/users')
 const profile = require('./routes/api/profile')
 const posts = require('./routes/api/posts')
@@ -15,6 +16,7 @@ app.use(bodyParser.json())
 // DB config
 const db = require('./config/key').mongoURI;
 
+// ROOT 
 app.get('/', (req, res) => {
     res.send('Hello World');
 })
